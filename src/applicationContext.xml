@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans 
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean id="idsessionFactory"
+		class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
+		<property name="configLocation" value="classpath:hibernate.cfg.xml"/>
+	</bean>
+	<bean id="typeaction" class="plast.org.ua.upu.dao.TypeActionDao">
+		<property name="sessionFactory">
+			<ref bean="idsessionFactory"/>
+		</property>
+	</bean>
+	<bean id="stan" class="plast.org.ua.upu.dao.StanytsyaDao">
+		<property name="sessionFactory">
+			<ref bean="idsessionFactory"/>
+		</property>
+	</bean>
+	<bean id="kurin" class="plast.org.ua.upu.dao.KurinDao">
+	<property name="sessionFactory">
+			<ref bean="idsessionFactory"/>
+		</property>
+	</bean>
+	<bean id="vyshkil" class="plast.org.ua.upu.dao.VyshkilDao">
+	<property name="sessionFactory">
+			<ref bean="idsessionFactory"/>
+		</property>
+	</bean>
+	<bean id="kv" class="plast.org.ua.upu.dao.KVDao">
+	<property name="sessionFactory">
+			<ref bean="idsessionFactory"/>
+		</property>
+	</bean>
+	<bean id="stupin" class="plast.org.ua.upu.dao.StupinDao">
+		<property name="sessionFactory">
+				<ref bean="idsessionFactory"/>
+		</property>
+	</bean>
+	<bean id="komend" class="plast.org.ua.upu.dao.KomendantDao">
+		<property name="sessionFactory">
+				<ref bean="idsessionFactory"/>
+		</property>
+	</bean>
+	<bean id="organ" class="plast.org.ua.upu.dao.OrganizerDao">
+		<property name="sessionFactory">
+				<ref bean="idsessionFactory"/>
+		</property>
+	</bean>
+	<bean id="typedoc" class="plast.org.ua.upu.dao.TypeDoctorDao">
+		<property name="sessionFactory">
+				<ref bean="idsessionFactory"/>
+		</property>
+	</bean>
+	<bean id="doctor" class="plast.org.ua.upu.dao.DoctorDao">
+		<property name="sessionFactory">
+				<ref bean="idsessionFactory"/>
+		</property>	
+	</bean>
+	<bean id="costitem" class="plast.org.ua.upu.dao.CostitemDao">
+		<property name="sessionFactory">
+				<ref bean="idsessionFactory"/>
+		</property>	
+	</bean>
+	<bean id="events" class="plast.org.ua.upu.dao.EventsDao">
+		<property name="sessionFactory">
+				<ref bean="idsessionFactory"/>
+		</property>	
+	</bean>
+	<bean id="estimate" class="plast.org.ua.upu.dao.EstimateDao">
+		<property name="sessionFactory">
+				<ref bean="idsessionFactory"/>
+		</property>	
+	</bean>
+	<bean id="statusadv" class="plast.org.ua.upu.dao.StatusAdvertDao">
+		<property name="sessionFactory">
+				<ref bean="idsessionFactory"/>
+		</property>	
+	</bean>
+	<bean id="recomend" class="plast.org.ua.upu.dao.RecommendationDao">
+		<property name="sessionFactory">
+				<ref bean="idsessionFactory"/>
+		</property>	
+	</bean>
+	<bean id="leader" class="plast.org.ua.upu.dao.LeaderShipDao">
+		<property name="sessionFactory">
+				<ref bean="idsessionFactory"/>
+		</property>	
+	</bean>
+	<bean id="report" class="plast.org.ua.upu.dao.ReportDao">
+		<property name="sessionFactory">
+				<ref bean="idsessionFactory"/>
+		</property>	
+	</bean>
+	<bean id="statusrep" class="plast.org.ua.upu.dao.StatusReportDao">
+		<property name="sessionFactory">
+				<ref bean="idsessionFactory"/>
+		</property>	
+	</bean>
+	<bean id="locparsta" class="plast.org.ua.upu.dao.LocateParticipantStanDao">
+		<property name="sessionFactory">
+				<ref bean="idsessionFactory"/>
+		</property>	
+	</bean>
+	<bean id="leadshipevent" class="plast.org.ua.upu.dao.LeaderShipEventDao">
+		<property name="sessionFactory">
+				<ref bean="idsessionFactory"/>
+		</property>	
+	</bean>
+	<bean id="reportestim" class="plast.org.ua.upu.dao.ReportEstimateDao">
+		<property name="sessionFactory">
+				<ref bean="idsessionFactory"/>
+		</property>	
+	</bean>
+	<bean id="photos" class="plast.org.ua.upu.dao.PhotosEventReportDao">
+		<property name="sessionFactory">
+				<ref bean="idsessionFactory"/>
+		</property>	
+	</bean>
+	<bean id="lavelaction" class="plast.org.ua.upu.dao.LevelActionDao">
+		<property name="sessionFactory">
+				<ref bean="idsessionFactory"/>
+		</property>	
+	</bean>
+</beans>
